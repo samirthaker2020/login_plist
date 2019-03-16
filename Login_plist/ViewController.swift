@@ -44,7 +44,16 @@ var user:String?
                 }
                 else
                 {
-                     
+                    let alertController = UIAlertController(title: "Alert", message: "UserName or Password is Invalid!!!", preferredStyle: .alert)
+                    
+                    let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                        print("You've pressed default");
+                    }
+                    
+                    
+                    alertController.addAction(action1)
+                  
+                    self.present(alertController, animated: true, completion: nil)
                     
                 }
             }
