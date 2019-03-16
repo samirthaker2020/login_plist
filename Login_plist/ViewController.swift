@@ -38,17 +38,14 @@ var user:String?
                 if(user==txtuid.text && pass==txtpass.text)
                 {
                     print("login sucess")
-                    print("uid::\(self.user!)")
-                    print("Pass::\(self.pass!)")
+                    let ab = UIStoryboard(name: "Main", bundle: nil)
+                    let VC1 = ab.instantiateViewController(withIdentifier: "home") as! HomeTableViewController
+                    self.navigationController?.pushViewController(VC1, animated: true)
                 }
                 else
                 {
-                    print("login fail")
-                    print("uid::\(self.user!)")
-                    print("Pass::\(self.pass!)")
-                    print("----------------")
-                    print(txtuid.text)
-                    print(txtpass.text)
+                     
+                    
                 }
             }
             
